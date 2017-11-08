@@ -11,3 +11,4 @@ out/
 *.sha1
 *.h2.db
 .settings
+.slcache/
