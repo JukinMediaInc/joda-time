@@ -1,7 +1,6 @@
 package jodatest
 
 import spock.lang.*
-import org.joda.time.*
 import com.mashape.unirest.http.Unirest
 
 @Issue("http://jira.grails.org/browse/GPJODATIME-45")
