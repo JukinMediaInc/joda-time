@@ -36,7 +36,7 @@ grails.project.dependency.resolution = {
 		build ":tomcat:7.0.70"
 
         //noinspection GroovyAssignabilityCheck
-        runtime ":fields:1.3",
+        runtime ":fields:1.4",
 				":hibernate4:4.3.10"
         //noinspection GroovyAssignabilityCheck
 		test ':build-test-data:2.4.0',
