@@ -14,8 +14,8 @@ grails.project.dependency.resolution = {
 		mavenCentral()
 	}
 
-	def gebVersion = '0.9.2'
-	def seleniumVersion = '2.41.0'
+	def gebVersion = '0.13.1'
+	def seleniumVersion = '3.7.1'
 
 	dependencies {
 		test "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion",
@@ -25,13 +25,13 @@ grails.project.dependency.resolution = {
 		compile 'org.jadira.usertype:usertype.jodatime:2.0.1'
 	}
 	plugins {
-		build ":tomcat:7.0.52.1"
+		build ":tomcat:7.0.70"
 		runtime ":fields:1.3",
-				":hibernate4:4.3.4.2"
-		test ':build-test-data:2.1.2',
-				':fixtures:1.2',
+				":hibernate4:4.3.10"
+		test ':build-test-data:2.4.0',
+				':fixtures:1.3',
 				":geb:$gebVersion"
-        compile ":scaffolding:2.0.2"
+        compile ":scaffolding:2.1.2"
     }
 }
 
