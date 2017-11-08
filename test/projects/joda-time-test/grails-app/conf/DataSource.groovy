@@ -22,19 +22,19 @@ environments {
     development {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:h2:mem:devDb"
+            url = "jdbc:h2:mem:devDb;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:mem:testDb"
+            url = "jdbc:h2:mem:testDb;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:prodDb"
+            url = "jdbc:h2:prodDb;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
 }
