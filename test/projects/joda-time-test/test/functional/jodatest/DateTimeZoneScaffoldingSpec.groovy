@@ -1,20 +1,22 @@
 package jodatest
 
+import grails.buildtestdata.mixin.Build
 import org.joda.time.DateTimeZone
 import spock.lang.Shared
 
+@Build([City])
 class DateTimeZoneScaffoldingSpec extends GebSpec {
 
 	@Shared def london
 
-	def setupSpec() {
-		City.withSession {
+	def setup() {
+		City.withNewSession {
 			london = City.build(name: "London", timeZone: DateTimeZone.forID("Europe/London"))
 		}
 	}
 
-	def cleanupSpec() {
-		City.withSession {
+	def cleanup() {
+		City.withNewSession {
 			City.list()*.delete(flush: true)
 		}
 	}

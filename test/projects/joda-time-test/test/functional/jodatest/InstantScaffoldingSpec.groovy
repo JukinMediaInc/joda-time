@@ -1,8 +1,10 @@
 package jodatest
 
+import grails.buildtestdata.mixin.Build
 import org.joda.time.Instant
 import spock.lang.Unroll
 
+@Build([Event])
 @Unroll
 class InstantScaffoldingSpec extends GebSpec {
 

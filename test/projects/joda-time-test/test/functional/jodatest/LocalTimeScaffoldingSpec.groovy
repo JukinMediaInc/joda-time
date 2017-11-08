@@ -1,10 +1,12 @@
 package jodatest
 
+import grails.buildtestdata.mixin.Build
 import org.joda.time.LocalTime
 import grails.util.Holders
 import spock.lang.Unroll
 
 @Unroll
+@Build([Alarm])
 class LocalTimeScaffoldingSpec extends GebSpec {
 	def alarm1
 

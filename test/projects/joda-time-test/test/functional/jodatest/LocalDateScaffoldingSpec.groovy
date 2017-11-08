@@ -1,9 +1,11 @@
 package jodatest
 
+import grails.buildtestdata.mixin.Build
 import org.joda.time.LocalDate
 import grails.util.Holders
 import spock.lang.Unroll
 
+@Build([Person])
 @Unroll
 class LocalDateScaffoldingSpec extends GebSpec {
 

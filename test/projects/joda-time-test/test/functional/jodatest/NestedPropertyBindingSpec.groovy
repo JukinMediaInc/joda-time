@@ -1,9 +1,11 @@
 package jodatest
 
+import grails.test.mixin.Mock
 import org.joda.time.LocalDate
 import spock.lang.Issue
 
 @Issue('http://jira.grails.org/browse/GPJODATIME-21')
+@Mock([Employee])
 class NestedPropertyBindingSpec extends GebSpec {
 
 	def "can bind with a structured editor to a property of an embedded type"() {

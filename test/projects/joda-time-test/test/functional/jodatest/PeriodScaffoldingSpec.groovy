@@ -1,12 +1,15 @@
 package jodatest
 
+import grails.buildtestdata.mixin.Build
 import org.joda.time.Period
+import spock.lang.Shared
 import spock.lang.Unroll
 
 @Unroll
+@Build([Song])
 class PeriodScaffoldingSpec extends GebSpec {
 
-	def song1
+    @Shared def song1
 
 	def setup() {
 		Song.withNewSession {
@@ -80,8 +83,8 @@ class PeriodScaffoldingSpec extends GebSpec {
 		$("tbody tr")*.find("td", 1)*.text() == expected
 
 		where:
-		x | expected
-		1 | ["Ace of Spades", "Bulletproof", "I'm Confused"]
-		2 | ["I'm Confused", "Bulletproof", "Ace of Spades"]
+		x || expected
+		1 || ["Ace of Spades", "Bulletproof", "I'm Confused"]
+		2 || ["I'm Confused", "Bulletproof", "Ace of Spades"]
 	}
 }

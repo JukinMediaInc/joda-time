@@ -1,8 +1,10 @@
 package jodatest
 
+import grails.buildtestdata.mixin.Build
 import org.joda.time.Period
 import spock.lang.Unroll
 
+@Build([Marathon])
 @Unroll
 class DurationScaffoldingSpec extends GebSpec {
 
